@@ -2,7 +2,10 @@ class Solution:
     # @param A, a list of integer
     # @return an integer
     def singleNumber(self, A):
-        return reduce(lambda x,y:x^y,A)
+        result = 0
+        for i in A:
+            result = result ^ i;
+        return result
 
 
 A = [1, 2, 3, 2, 1]
