@@ -43,7 +43,6 @@ TODO Implement-strStr() 2012-02-18 21.8% Easy
 TODO Rotate-List 2012-03-27 22.0% Medium
 TODO Longest-Substring-Without-Repeating-Characters 2011-05-15 22.2% Medium
 TODO Valid-Palindrome 2013-01-12 22.3% Easy
-TODO Sqrt(x) 2012-04-03 22.3% Medium
 TODO Permutation-Sequence 2012-03-27 22.3% Medium
 TODO Best-Time-to-Buy-and-Sell-Stock-III 2012-11-06 22.4% Hard
 TODO First-Missing-Positive 2012-03-08 22.6% Hard
@@ -151,4 +150,5 @@ TODO Reverse-Integer 2011-12-25 39.9% Easy
 TODO Same-Tree 2012-09-03 41.8% Easy
 TODO Maximum-Depth-of-Binary-Tree 2012-09-29 43.8% Easy
 DONE Valid-Number 2012-04-02 11.0% Easy
+DONE  Sqrt(x) 2012-04-03 22.3% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
