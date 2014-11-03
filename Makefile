@@ -8,7 +8,7 @@ TARGET_BIN = $(SRC_C:%.cpp=%.bin)
 all: $(TARGET_JAVA) $(TARGET_OBJ) $(TARGET_BIN)
 
 %.class: %.java
-	javac $<
+	javac -classpath $(shell dirname $<) $<
 
 %.o: %.c
 	gcc -c $<
