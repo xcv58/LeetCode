@@ -12,11 +12,11 @@ class Solution:
     def connect(self, root):
         while root is not None:
             anchor = root
-            while anchor.next is not None:
+            while anchor is not None:
                 if anchor.left is not None:
                     anchor.left.next = anchor.right
+                    if anchor.next is None:
+                        break
                     anchor.right.next = anchor.next.left
                 anchor = anchor.next
-            if anchor.left is not None:
-                anchor.left.next = anchor.right
             root = root.left;

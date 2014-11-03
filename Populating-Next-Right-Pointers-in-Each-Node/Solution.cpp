@@ -12,17 +12,16 @@ class Solution {
 public:
   void connect(TreeLinkNode *root) {
     TreeLinkNode *anchor;
-    while (root != NULL) {
-      for (anchor = root; anchor->next != NULL; anchor = anchor->next) {
+    for (; root != NULL; root = root->left) {
+      for (anchor = root; anchor!= NULL; anchor = anchor->next) {
         if (anchor->left != NULL) {
           anchor->left->next = anchor->right;
+          if (anchor->next == NULL) {
+            break;
+          }
           anchor->right->next = anchor->next->left;
         }
       }
-      if (anchor->left != NULL) {
-        anchor->left->next = anchor->right;
-      }
-      root = root->left;
     }
     return;
   }

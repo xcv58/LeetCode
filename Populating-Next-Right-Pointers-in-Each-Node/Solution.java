@@ -9,17 +9,16 @@
 public class Solution {
     public void connect(TreeLinkNode root) {
         TreeLinkNode anchor;
-        while (root != null) {
-            for (anchor = root;  anchor.next != null; anchor = anchor.next) {
+        for (; root != null; root = root.left) {
+            for (anchor = root;  anchor != null; anchor = anchor.next) {
                 if (anchor.left != null) {
                     anchor.left.next = anchor.right;
+                    if (anchor.next == null) {
+                        break;
+                    }
                     anchor.right.next = anchor.next.left;
                 }
             }
-            if (anchor.left != null) {
-                anchor.left.next = anchor.right;
-            }
-            root = root.left;
         }
         return;
     }
