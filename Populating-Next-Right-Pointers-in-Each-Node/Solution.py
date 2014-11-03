@@ -10,17 +10,13 @@ class Solution:
     # @param root, a tree node
     # @return nothing
     def connect(self, root):
-        tmpRoot = root
-        while tmpRoot is not None:
-            tmpAnchor = tmpRoot
-            self.connectChildren(tmpAnchor)
-            while tmpAnchor.next is not None:
-                if tmpAnchor.left is not None:
-                    tmpAnchor.right.next = tmpAnchor.next.left;
-                tmpAnchor = tmpAnchor.next
-                self.connectChildren(tmpAnchor)
-            tmpRoot = tmpRoot.left;
-
-    def connectChildren(self, root):
-        if root.left is not None:
-            root.left.next = root.right
+        while root is not None:
+            anchor = root
+            while anchor.next is not None:
+                if anchor.left is not None:
+                    anchor.left.next = anchor.right
+                    anchor.right.next = anchor.next.left
+                anchor = anchor.next
+            if anchor.left is not None:
+                anchor.left.next = anchor.right
+            root = root.left;

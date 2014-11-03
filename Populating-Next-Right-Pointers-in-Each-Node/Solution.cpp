@@ -11,27 +11,20 @@ struct TreeLinkNode {
 class Solution {
 public:
   void connect(TreeLinkNode *root) {
-    TreeLinkNode *tmpRoot = root;
-    TreeLinkNode *tmpAnchor;
-    while (tmpRoot != NULL) {
-      tmpAnchor = tmpRoot;
-      connectChildren(tmpAnchor);
-      while (tmpAnchor->next != NULL) {
-        if (tmpAnchor->left != NULL) {
-          tmpAnchor->right->next = tmpAnchor->next->left;
+    TreeLinkNode *anchor;
+    while (root != NULL) {
+      for (anchor = root; anchor->next != NULL; anchor = anchor->next) {
+        if (anchor->left != NULL) {
+          anchor->left->next = anchor->right;
+          anchor->right->next = anchor->next->left;
         }
-        tmpAnchor = tmpAnchor->next;
-        connectChildren(tmpAnchor);
       }
-      tmpRoot = tmpRoot->left;
+      if (anchor->left != NULL) {
+        anchor->left->next = anchor->right;
+      }
+      root = root->left;
     }
     return;
-  }
-
-  void connectChildren(TreeLinkNode *root) {
-    if (root->left != NULL) {
-      root->left->next = root->right;
-    }
   }
 };
 

@@ -8,26 +8,19 @@
  */
 public class Solution {
     public void connect(TreeLinkNode root) {
-        TreeLinkNode tmpRoot = root;
-        TreeLinkNode tmpAnchor;
-        while (tmpRoot != null) {
-            tmpAnchor = tmpRoot;
-            this.connectChildren(tmpAnchor);
-            while (tmpAnchor.next != null) {
-                if (tmpAnchor.left != null) {
-                    tmpAnchor.right.next = tmpAnchor.next.left;
+        TreeLinkNode anchor;
+        while (root != null) {
+            for (anchor = root;  anchor.next != null; anchor = anchor.next) {
+                if (anchor.left != null) {
+                    anchor.left.next = anchor.right;
+                    anchor.right.next = anchor.next.left;
                 }
-                tmpAnchor = tmpAnchor.next;
-                this.connectChildren(tmpAnchor);
             }
-            tmpRoot = tmpRoot.left;
+            if (anchor.left != null) {
+                anchor.left.next = anchor.right;
+            }
+            root = root.left;
         }
         return;
-    }
-
-    private void connectChildren(TreeLinkNode root) {
-        if (root.left != null) {
-            root.left.next = root.right;
-        }
     }
 }
