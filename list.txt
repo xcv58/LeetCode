@@ -140,7 +140,6 @@ TODO Maximum-Subarray 2012-03-21 34.0% Medium
 TODO Climbing-Stairs 2012-04-03 34.1% Easy
 TODO Remove-Duplicates-from-Sorted-List 2012-04-22 34.8% Easy
 TODO Search-Insert-Position 2012-03-03 34.9% Medium
-TODO Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 TODO Binary-Tree-Preorder-Traversal 2013-11-05 35.5% Medium
 TODO Binary-Tree-Inorder-Traversal 2012-08-27 35.6% Medium
 TODO Linked-List-Cycle 2013-10-28 35.7% Medium
@@ -150,5 +149,6 @@ TODO Reverse-Integer 2011-12-25 39.9% Easy
 TODO Same-Tree 2012-09-03 41.8% Easy
 TODO Maximum-Depth-of-Binary-Tree 2012-09-29 43.8% Easy
 DONE Valid-Number 2012-04-02 11.0% Easy
-DONE  Sqrt(x) 2012-04-03 22.3% Medium
+DONE Sqrt 2012-04-03 22.3% Medium
+DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
