@@ -101,7 +101,6 @@ TODO Minimum-Depth-of-Binary-Tree 2012-10-09 29.4% Easy
 TODO Sum-Root-to-Leaf-Numbers 2013-02-18 29.8% Medium
 TODO Pascals-Triangle-II 2012-10-28 30.1% Easy
 TODO Combinations 2012-04-18 30.1% Medium
-TODO Path-Sum 2012-10-13 30.5% Easy
 TODO Remove-Duplicates-from-Sorted-Array-II 2012-04-19 30.6% Medium
 TODO Binary-Tree-Level-Order-Traversal 2012-09-28 30.6% Easy
 TODO Populating-Next-Right-Pointers-in-Each-Node-II 2012-10-28 30.7% Hard
@@ -150,5 +149,6 @@ TODO Same-Tree 2012-09-03 41.8% Easy
 TODO Maximum-Depth-of-Binary-Tree 2012-09-29 43.8% Easy
 DONE Valid-Number 2012-04-02 11.0% Easy
 DONE Sqrt 2012-04-03 22.3% Medium
+DONE Path-Sum 2012-10-13 30.5% Easy
 DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
