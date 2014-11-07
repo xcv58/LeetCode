@@ -1,0 +1,42 @@
+#include <vector>
+
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
+public:
+    std::vector<std::vector<int> > pathSum(TreeNode *root, int sum) {
+        std::vector<std::vector<int> > lists;
+
+        if (root == NULL) {
+            return lists;
+        }
+
+        if (root->left == NULL && root->right == NULL) {
+            if (sum == root->val) {
+                lists.push_back(std::vector<int>(1, sum));
+            }
+        } else {
+            combineLists(pathSum(root->left, sum - root->val), lists, root->val);
+            combineLists(pathSum(root->right, sum - root->val), lists, root->val);
+        }
+
+        return lists;
+    }
+
+    void combineLists(std::vector<std::vector<int> > src, std::vector<std::vector<int> > & dest, int val) {
+        for(int i = 0; i != src.size(); i++) {
+            src[i].insert(src[i].begin(), val);
+            dest.push_back(src[i]);
+        }
+        return;
+    }
+};
+
+int main() {
+  return 0;
+}
