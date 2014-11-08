@@ -107,7 +107,6 @@ TODO Linked-List-Cycle-II 2013-10-30 30.7% Medium
 TODO Spiral-Matrix-II 2012-03-27 30.8% Medium
 TODO Set-Matrix-Zeroes 2012-04-05 30.8% Medium
 TODO Search-in-Rotated-Sorted-Array-II 2012-04-19 30.9% Medium
-TODO Minimum-Path-Sum 2012-03-28 31.0% Medium
 TODO Binary-Tree-Postorder-Traversal 2013-11-07 31.0% Hard
 TODO Binary-Tree-Level-Order-Traversal-II 2012-10-01 31.0% Easy
 TODO Search-a-2D-Matrix 2012-04-06 31.2% Medium
@@ -150,5 +149,6 @@ DONE Valid-Number 2012-04-02 11.0% Easy
 DONE Sqrt 2012-04-03 22.3% Medium
 DONE Path-Sum-II 2012-10-14 26.9% Medium
 DONE Path-Sum 2012-10-13 30.5% Easy
+DONE Minimum-Path-Sum 2012-03-28 31.0% Medium
 DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
