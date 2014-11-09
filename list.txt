@@ -16,7 +16,6 @@ TODO Substring-with-Concatenation-of-All-Words 2012-02-23 18.1% Hard
 TODO Minimum-Window-Substring 2012-04-15 18.1% Hard
 TODO Palindrome-Partitioning-II 2013-02-28 18.3% Hard
 TODO Word-Ladder 2013-02-10 18.4% Medium
-TODO Two-Sum 2011-03-13 18.4% Medium
 TODO Candy 2013-09-30 19.2% Hard
 TODO Interleaving-String 2012-08-30 19.5% Hard
 TODO Longest-Valid-Parentheses 2012-02-29 19.7% Hard
@@ -146,6 +145,7 @@ TODO Reverse-Integer 2011-12-25 39.9% Easy
 TODO Same-Tree 2012-09-03 41.8% Easy
 TODO Maximum-Depth-of-Binary-Tree 2012-09-29 43.8% Easy
 DONE Valid-Number 2012-04-02 11.0% Easy
+DONE Two-Sum 2011-03-13 18.4% Medium
 DONE Sqrt 2012-04-03 22.3% Medium
 DONE Path-Sum-II 2012-10-14 26.9% Medium
 DONE Path-Sum 2012-10-13 30.5% Easy
