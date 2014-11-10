@@ -116,7 +116,6 @@ TODO Best-Time-to-Buy-and-Sell-Stock 2012-10-30 31.2% Medium
 TODO Container-With-Most-Water 2012-01-08 31.3% Medium
 TODO Plus-One 2012-04-02 31.4% Easy
 TODO Generate-Parentheses 2012-02-12 31.5% Medium
-TODO Unique-Paths 2012-03-28 31.7% Medium
 TODO Symmetric-Tree 2012-09-23 31.7% Easy
 TODO Merge-Sorted-Array 2012-05-20 31.8% Easy
 TODO Find-Minimum-in-Rotated-Sorted-Array 2014-10-15 31.8% Medium
@@ -150,5 +149,6 @@ DONE Sqrt 2012-04-03 22.3% Medium
 DONE Path-Sum-II 2012-10-14 26.9% Medium
 DONE Path-Sum 2012-10-13 30.5% Easy
 DONE Minimum-Path-Sum 2012-03-28 31.0% Medium
+DONE Unique-Paths 2012-03-28 31.7% Medium
 DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
