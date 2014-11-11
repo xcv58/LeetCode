@@ -1,4 +1,5 @@
 #include <vector>
+using namespace std;
 
 struct TreeNode {
   int val;
@@ -9,8 +10,8 @@ struct TreeNode {
 
 class Solution {
 public:
-    std::vector<std::vector<int> > pathSum(TreeNode *root, int sum) {
-        std::vector<std::vector<int> > lists;
+    vector<std::vector<int> > pathSum(TreeNode *root, int sum) {
+        vector<std::vector<int> > lists;
 
         if (root == NULL) {
             return lists;
@@ -18,7 +19,7 @@ public:
 
         if (root->left == NULL && root->right == NULL) {
             if (sum == root->val) {
-                lists.push_back(std::vector<int>(1, sum));
+                lists.push_back(vector<int>(1, sum));
             }
         } else {
             combineLists(pathSum(root->left, sum - root->val), lists, root->val);
@@ -28,7 +29,7 @@ public:
         return lists;
     }
 
-    void combineLists(std::vector<std::vector<int> > src, std::vector<std::vector<int> > & dest, int val) {
+    void combineLists(vector<std::vector<int> > src, std::vector<std::vector<int> > & dest, int val) {
         for(int i = 0; i != src.size(); i++) {
             src[i].insert(src[i].begin(), val);
             dest.push_back(src[i]);

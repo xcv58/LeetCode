@@ -1,12 +1,13 @@
 #include <vector>
+using namespace std;
 
 class Solution {
 public:
-  std::vector<int> twoSum(std::vector<int> &numbers, int target) {
-    std::vector<int> tmpNumbers(numbers);
-    std::sort(tmpNumbers.begin(), tmpNumbers.end());
+  vector<int> twoSum(std::vector<int> &numbers, int target) {
+    vector<int> tmpNumbers(numbers);
+    sort(tmpNumbers.begin(), tmpNumbers.end());
 
-    std::vector<int> result;
+    vector<int> result;
     int num1 = 0;
     int num2 = 0;
     for (int i = 0, j = tmpNumbers.size() - 1, sum; i < j;) {

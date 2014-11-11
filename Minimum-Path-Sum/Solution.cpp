@@ -1,10 +1,12 @@
 #include <vector>
+using namespace std;
+
 class Solution {
 public:
-    int minPathSum(std::vector<std::vector<int> > &grid) {
-        std::vector<std::vector<int> > minBoard;
+    int minPathSum(vector<std::vector<int> > &grid) {
+        vector<std::vector<int> > minBoard;
         for (int i = 0; i < grid.size(); i++) {
-            minBoard.push_back(std::vector<int>(grid[i].size(), 0));
+            minBoard.push_back(vector<int>(grid[i].size(), 0));
         }
         for (int i = 0; i < grid.size(); i++) {
             for (int j = 0; j < grid[i].size(); j++) {
@@ -15,7 +17,7 @@ public:
         return minBoard[grid.size() - 1][grid[0].size() - 1];
     }
 
-    int min(std::vector<std::vector<int> > &minBoard, int i, int j) {
+    int min(vector<std::vector<int> > &minBoard, int i, int j) {
         if (i == 0 && j == 0) {
             return 0;
         }
