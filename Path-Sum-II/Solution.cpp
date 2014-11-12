@@ -10,8 +10,8 @@ struct TreeNode {
 
 class Solution {
 public:
-    vector<std::vector<int> > pathSum(TreeNode *root, int sum) {
-        vector<std::vector<int> > lists;
+    vector<vector<int> > pathSum(TreeNode *root, int sum) {
+        vector<vector<int> > lists;
 
         if (root == NULL) {
             return lists;
@@ -29,7 +29,7 @@ public:
         return lists;
     }
 
-    void combineLists(vector<std::vector<int> > src, std::vector<std::vector<int> > & dest, int val) {
+    void combineLists(vector<vector<int> > src, vector<vector<int> > & dest, int val) {
         for(int i = 0; i != src.size(); i++) {
             src[i].insert(src[i].begin(), val);
             dest.push_back(src[i]);

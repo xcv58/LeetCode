@@ -3,7 +3,7 @@ using namespace std;
 
 class Solution {
 public:
-  vector<int> twoSum(std::vector<int> &numbers, int target) {
+  vector<int> twoSum(vector<int> &numbers, int target) {
     vector<int> tmpNumbers(numbers);
     sort(tmpNumbers.begin(), tmpNumbers.end());
 

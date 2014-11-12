@@ -3,8 +3,8 @@ using namespace std;
 
 class Solution {
 public:
-    int minPathSum(vector<std::vector<int> > &grid) {
-        vector<std::vector<int> > minBoard;
+    int minPathSum(vector<vector<int> > &grid) {
+        vector<vector<int> > minBoard;
         for (int i = 0; i < grid.size(); i++) {
             minBoard.push_back(vector<int>(grid[i].size(), 0));
         }
@@ -17,7 +17,7 @@ public:
         return minBoard[grid.size() - 1][grid[0].size() - 1];
     }
 
-    int min(vector<std::vector<int> > &minBoard, int i, int j) {
+    int min(vector<vector<int> > &minBoard, int i, int j) {
         if (i == 0 && j == 0) {
             return 0;
         }
