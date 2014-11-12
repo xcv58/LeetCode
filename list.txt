@@ -137,7 +137,6 @@ TODO Remove-Duplicates-from-Sorted-List 2012-04-22 34.8% Easy
 TODO Search-Insert-Position 2012-03-03 34.9% Medium
 TODO Binary-Tree-Preorder-Traversal 2013-11-05 35.5% Medium
 TODO Binary-Tree-Inorder-Traversal 2012-08-27 35.6% Medium
-TODO Linked-List-Cycle 2013-10-28 35.7% Medium
 TODO Unique-Binary-Search-Trees 2012-08-27 36.5% Medium
 TODO Best-Time-to-Buy-and-Sell-Stock-II 2012-10-30 36.5% Medium
 TODO Reverse-Integer 2011-12-25 39.9% Easy
@@ -151,4 +150,5 @@ DONE Path-Sum 2012-10-13 30.5% Easy
 DONE Minimum-Path-Sum 2012-03-28 31.0% Medium
 DONE Unique-Paths 2012-03-28 31.7% Medium
 DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
+DONE Linked-List-Cycle 2013-10-28 35.7% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
