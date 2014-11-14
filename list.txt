@@ -120,7 +120,6 @@ TODO Symmetric-Tree 2012-09-23 31.7% Easy
 TODO Merge-Sorted-Array 2012-05-20 31.8% Easy
 TODO Find-Minimum-in-Rotated-Sorted-Array 2014-10-15 31.8% Medium
 TODO Sort-Colors 2012-04-08 32.1% Medium
-TODO Gray-Code 2012-05-20 32.1% Medium
 TODO Remove-Duplicates-from-Sorted-Array 2012-02-16 32.2% Easy
 TODO Swap-Nodes-in-Pairs 2012-02-14 32.3% Medium
 TODO Balanced-Binary-Tree 2012-10-08 32.5% Easy
@@ -149,6 +148,7 @@ DONE Path-Sum-II 2012-10-14 26.9% Medium
 DONE Path-Sum 2012-10-13 30.5% Easy
 DONE Minimum-Path-Sum 2012-03-28 31.0% Medium
 DONE Unique-Paths 2012-03-28 31.7% Medium
+DONE Gray-Code 2012-05-20 32.1% Medium
 DONE Populating-Next-Right-Pointers-in-Each-Node 2012-10-28 35.2% Medium
 DONE Linked-List-Cycle 2013-10-28 35.7% Medium
 DONE Single-Number 2013-10-01 45.7% Medium
