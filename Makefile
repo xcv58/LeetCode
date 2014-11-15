@@ -20,3 +20,14 @@ clean:
 	rm -f $(TARGET_JAVA)
 	rm -f $(TARGET_OBJ)
 	rm -f $(TARGET_BIN)
+
+todo:
+	@ag -g "cpp|py|java" | sed -e 's/\/.*//' | sort | uniq -c | sort | ag "^\s*[12]"
+
+commited:
+	@git ls-files --directory | grep "/" | sed "s/\/.*//" | sort | uniq | wc -l
+	@git ls-files --directory | grep "/" | sed "s/\/.*//" | sort | uniq
+
+uncommit:
+	@(ag -g "cpp|py|java" | sed -e 's/\/.*//' | sort | uniq; git ls-files --directory | grep "/" | sed "s/\/.*//" | sort | uniq) | sort | uniq -u | wc -l
+	@(ag -g "cpp|py|java" | sed -e 's/\/.*//' | sort | uniq; git ls-files --directory | grep "/" | sed "s/\/.*//" | sort | uniq) | sort | uniq -u
