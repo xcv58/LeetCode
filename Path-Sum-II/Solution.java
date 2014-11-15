@@ -19,7 +19,7 @@ public class Solution {
 
     private void combineLists(List<List<Integer>> src, List<List<Integer>> dest, int val) {
         for (List<Integer> tmpList : src) {
-            ((LinkedList)tmpList).addFirst(val);
+            ((LinkedList<Integer>)tmpList).addFirst(val);
             dest.add(tmpList);
         }
         return;
