@@ -5,14 +5,28 @@ public class Solution {
 
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         int max = 0;
-        for (int i = 0; i < s.length(); max = Math.max(getMaxLength(s, i), max), i++);
+        for (int i = 0; i < s.length(); i++) {
+            int[] result = getMaxLength(s, i);
+            max = Math.max(result[0], max);
+            i += Math.max(result[0] - result[1] - 1, 0);
+        }
         return max;
     }
 
-    private int getMaxLength(String s, int i) {
+    private int[] getMaxLength(String s, int i) {
         HashSet<Character> set = new HashSet<Character>();
-        int result = 0;
-        for (int index = i; index < s.length() && set.size() <= DISTINCT_NUM; set.add(s.charAt(index)), index++, result++);
-        return result - (set.size() > DISTINCT_NUM ? 1 : 0);
+        char c = s.charAt(i);
+        int result[] = new int[2];
+        for (int index = i; index < s.length(); index++, result[0]++, result[1]++) {
+            set.add(s.charAt(index));
+            if (set.size() > DISTINCT_NUM) {
+                return result;
+            }
+            if (c != s.charAt(index)) {
+                c = s.charAt(index);
+                result[1] = 0;
+            }
+        }
+        return result;
     }
 }
