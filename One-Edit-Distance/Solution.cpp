@@ -1,23 +1,19 @@
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
     bool isOneEditDistance(string s, string t) {
-        int ls = s.size();
-        int lt = t.size();
-        if (abs(ls - lt) > 1) {
-            return false;
-        }
-
-        int si = 0, ti = 0;
-        for (; si < ls && ti < lt; si++, ti++) {
-            if (s.at(si) != t.at(ti)) {
-                for (int i = si + (ls - si >= lt - ti ? 1 : 0), j = ti + (ls - si <= lt - ti ? 1 : 0); i < ls && j < lt; i++, j++) {
-                    if (s.at(i) != t.at(j)) {
-                        return false;
-                    }
-                }
-                return true;
+        for (int i = 0; i < min(s.size(), t.size()); i++) {
+            if (s.at(i) != t.at(i)) {
+                return s.substr(i + (s.size() >= t.size() ? 1 : 0)).compare(t.substr(i + (s.size() <= t.size() ? 1 : 0))) == 0;
             }
         }
-        return abs(ls - si - lt + ti) == 1;
+        return s.size() - t.size() == 1 || s.size() - t.size() == -1;
     }
 };
+
+int main(int argc, char *argv[]) {
+    return 0;
+}

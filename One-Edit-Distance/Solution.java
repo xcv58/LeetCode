@@ -1,24 +1,10 @@
 public class Solution {
     public boolean isOneEditDistance(String s, String t) {
-        return Math.abs(s.length() - t.length()) <= 1 && isOneEditDistance(s, 0, t, 0);
-    }
-
-    public boolean isOneEditDistance(String s, int si, String t, int ti) {
-        if (si == s.length() || ti == t.length()) {
-            return s.length() - si + t.length() - ti == 1;
+        for (int i = 0; i < Math.min(s.length(), t.length()); i++) {
+            if (s.charAt(i) != t.charAt(i)) {
+                return s.substring(i + (s.length() >= t.length() ? 1 : 0)).equals(t.substring(i + (s.length() <= t.length() ? 1 : 0)));
+            }
         }
-
-        if (s.charAt(si) == t.charAt(ti)) {
-            return isOneEditDistance(s, si + 1, t, ti + 1);
-        } else {
-            return isSame(s, si + (s.length() - si >= t.length() - ti ? 1 : 0), t, ti + (t.length() - ti >= s.length() - si ? 1 : 0));
-        }
-    }
-
-    public boolean isSame(String s, int si, String t, int ti) {
-        if (si == s.length() || ti == t.length()) {
-            return s.length() - si + t.length() - ti == 0;
-        }
-        return (s.charAt(si) == t.charAt(ti)) && isSame(s, si + 1, t, ti + 1);
+        return Math.abs(s.length() - t.length()) == 1;
     }
 }
