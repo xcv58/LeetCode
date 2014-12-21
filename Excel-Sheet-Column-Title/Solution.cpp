@@ -5,9 +5,7 @@ using namespace std;
 class Solution {
 public:
     string convertToTitle(int n) {
-        if (n == 0) { return ""; }
-        char c = --n % 26 +'A';
-        return convertToTitle(n / 26) + c;
+        return n == 0 ? "" : convertToTitle((n - 1) / 26) + (char) ((n - 1) % 26 + 'A') ;
     }
 };
 
