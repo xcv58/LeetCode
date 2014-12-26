@@ -11,4 +11,4 @@ I plan to revise and publish all my solutions by three different languages.
 
 20141029 by xcv58
 
-![xcv58's Screenshot](https://dl.dropboxusercontent.com/u/4121165/LeetCode/All-sort-by-ac.png "xcv58's Screenshot")
+![xcv58's Screenshot](https://dl.dropboxusercontent.com/u/4121165/LeetCode/All-sort-by-time.png "xcv58's Screenshot")
