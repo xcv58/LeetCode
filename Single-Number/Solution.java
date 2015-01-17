@@ -1,10 +1,8 @@
+import java.util.*;
+
 public class Solution {
     public int singleNumber(int[] A) {
-        int result = 0;
-        for (int tmpInt : A) {
-            result ^= tmpInt;
-        }
-        return result;
+        return Arrays.stream(A).reduce(0, (x, y) -> x^y);
     }
 
     public static void main(String[] args) {
