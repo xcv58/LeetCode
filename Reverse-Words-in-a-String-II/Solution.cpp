@@ -1,3 +1,7 @@
+#include <string>
+
+using namespace std;
+
 class Solution {
 public:
     void reverseWords(string &s) {
@@ -8,3 +12,7 @@ public:
         reverse(s.begin(), s.end());
     }
 };
+
+int main(int argc, char *argv[]) {
+    return 0;
+}
