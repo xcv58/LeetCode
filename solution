@@ -1,0 +1,45 @@
+#!/bin/bash
+set -e
+
+# A POSIX variable
+OPTIND=1  # Reset in case getopts has been used previously in the shell.
+
+# Initialize our own variables:
+ext="java"
+
+function show_help() {
+  echo "$(basename "$0") [-l] [-l java] The Problem Name
+  It will
+    1. Create directory of 'The-Problem-Name'
+    2. Use default EDITOR to open 'The-Problem-Name/Solution.java' file
+  where:
+    -h  show this help text
+    -l  set the language (default: java)"
+}
+
+while getopts "h?l:" opt; do
+  case "$opt" in
+    h|\?)
+    show_help
+    exit 0
+    ;;
+    l)  ext=$OPTARG
+    ;;
+  esac
+done
+
+shift $((OPTIND-1))
+
+[ "$1" = "--" ] && shift
+
+function join { local IFS="$1"; shift; echo "$*"; }
+
+directory=$(join "-" "${@}")
+
+if [ -z "${directory}" ]; then
+  show_help
+  exit 1
+fi
+
+mkdir "${directory}"
+${EDITOR} "${directory}/Solution.${ext}"
