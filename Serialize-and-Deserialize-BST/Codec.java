@@ -24,7 +24,7 @@ public class Codec {
         this.index = 0;
         return this.deserialize(nodes);
     }
-    
+
     private TreeNode deserialize(String[] nodes) {
         if (index >= nodes.length) {
             return null;
