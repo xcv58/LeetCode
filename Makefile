@@ -6,7 +6,7 @@ TARGET_JAVA = $(SRC_JAVA:%.java=%.class)
 TARGET_OBJ = $(SRC_CPP:%.cpp=%.obj)
 TARGET_O = $(SRC_C:%.c=%.o)
 
-all: $(TARGET_O) $(TARGET_OBJ)
+all: $(TARGET_JAVA) $(TARGET_O) $(TARGET_OBJ)
 
 %.class: %.java
 	javac -classpath $(shell dirname $<) $<
