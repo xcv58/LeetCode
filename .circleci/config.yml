@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:latest
+    working_directory: ~/LeetCode
+    steps:
+      - checkout
+      - run: make
