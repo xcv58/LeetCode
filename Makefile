@@ -19,7 +19,7 @@ java: $(TARGET_JAVA)
 	gcc -std=c11 -c $< -o $@
 
 %.obj: %.cpp
-	g++ -c $< -o $@
+	gcc -c $< -o $@
 
 clean: clean-c clean-java
 
