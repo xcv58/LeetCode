@@ -8,7 +8,5 @@ addons:
     packages:
     - gcc-6
     - g++-6
-before_install:
-  - alias gcc=gcc-6
 install: true
 script: make
