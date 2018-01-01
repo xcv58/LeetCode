@@ -13,4 +13,4 @@ I plan to revise and publish all my solutions by three different languages.
 
 20141029 by xcv58
 
-![xcv58's Screenshot](https://dl.dropboxusercontent.com/u/4121165/LeetCode/progress.png "xcv58's Screenshot")
+![xcv58's Screenshot](https://user-images.githubusercontent.com/503123/34465526-8c29257e-ee7e-11e7-8482-dff916796f35.png)
