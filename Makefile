@@ -15,12 +15,16 @@ all: $(TARGET_JAVA) $(TARGET_O) $(TARGET_OBJ)
 	gcc -c $< -o $@
 
 %.obj: %.cpp
-	gcc -c $< -o $@
+	gcc -std=c11 -c $< -o $@
 
-clean:
-	rm -f $(TARGET_JAVA)
+clean: clean-c clean-java
+
+clean-c:
 	rm -f $(TARGET_O)
 	rm -f $(TARGET_OBJ)
+
+clean-java:
+	rm -f $(TARGET_JAVA)
 
 todo:
 	@ag -g "cpp|py|java" | sed -e 's/\/.*//' | sort | uniq -c | sort | ag "^\s*[12]"
