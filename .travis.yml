@@ -4,8 +4,7 @@ jdk:
 addons:
   apt:
     packages:
-    - g++
+    - gcc-4.9
+    - g++-4.9
 install: true
-script:
-  - make
-  - echo success!
+script: make
