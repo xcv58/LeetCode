@@ -7,6 +7,10 @@ TARGET_OBJ = $(SRC_CPP:%.cpp=%.obj)
 TARGET_O = $(SRC_C:%.c=%.o)
 
 CC = gcc-6
+ifeq (, $(shell which $(CC)))
+	CC = gcc
+endif
+
 JCC = javac
 
 all: c java
