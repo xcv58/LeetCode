@@ -6,21 +6,36 @@ TARGET_JAVA = $(SRC_JAVA:%.java=%.class)
 TARGET_OBJ = $(SRC_CPP:%.cpp=%.obj)
 TARGET_O = $(SRC_C:%.c=%.o)
 
-all: $(TARGET_JAVA) $(TARGET_O) $(TARGET_OBJ)
+CC = gcc-6
+ifeq (, $(shell which $(CC)))
+	CC = gcc
+endif
+
+JCC = javac
+
+all: c java
+
+c: $(TARGET_O) $(TARGET_OBJ)
+
+java: $(TARGET_JAVA)
 
 %.class: %.java
-	javac -classpath $(shell dirname $<) $<
+	$(JCC) -classpath $(shell dirname $<) $<
 
 %.o: %.c
-	gcc -c $< -o $@
+	$(CC) -std=c11 -c $< -o $@
 
 %.obj: %.cpp
-	gcc -c $< -o $@
+	$(CC) -c $< -o $@
 
-clean:
-	rm -f $(TARGET_JAVA)
+clean: clean-c clean-java
+
+clean-c:
 	rm -f $(TARGET_O)
 	rm -f $(TARGET_OBJ)
+
+clean-java:
+	rm -f $(TARGET_JAVA)
 
 todo:
 	@ag -g "cpp|py|java" | sed -e 's/\/.*//' | sort | uniq -c | sort | ag "^\s*[12]"
