@@ -16,10 +16,10 @@ java: $(TARGET_JAVA)
 	javac -classpath $(shell dirname $<) $<
 
 %.o: %.c
-	gcc -std=c11 -c $< -o $@
+	gcc-6 -std=c11 -c $< -o $@
 
 %.obj: %.cpp
-	gcc -c $< -o $@
+	gcc-6 -c $< -o $@
 
 clean: clean-c clean-java
 

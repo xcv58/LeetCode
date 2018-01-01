@@ -7,7 +7,6 @@ addons:
     - ubuntu-toolchain-r-test
     packages:
     - gcc-6
-    - g++-6
 before_install:
   - alias gcc=gcc-6
 install: true
