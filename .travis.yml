@@ -2,6 +2,6 @@ language: java
 jdk:
   - oraclejdk8
 install: true
-scripts:
+script:
   - make
   - echo success!
