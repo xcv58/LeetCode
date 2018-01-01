@@ -4,7 +4,12 @@ jdk:
 addons:
   apt:
     packages:
-    - gcc-6.3
-    - g++-6.3
+    - make
+    - automake
+    - gcc
+    - build-essential
+    - g++
+    - cpp
+    - libc6-dev
 install: true
 script: make
