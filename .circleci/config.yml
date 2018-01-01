@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:latest
+      - image: xcv58/openjdk
     working_directory: ~/LeetCode
     steps:
       - checkout

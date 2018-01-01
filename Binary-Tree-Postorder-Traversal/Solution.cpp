@@ -1,3 +1,5 @@
+#include <algorithm>
+#include <cstddef>
 #include <stack>
 #include <vector>
 
