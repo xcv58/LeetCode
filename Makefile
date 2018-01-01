@@ -6,6 +6,9 @@ TARGET_JAVA = $(SRC_JAVA:%.java=%.class)
 TARGET_OBJ = $(SRC_CPP:%.cpp=%.obj)
 TARGET_O = $(SRC_C:%.c=%.o)
 
+CC = gcc-6
+JCC = javac
+
 all: c java
 
 c: $(TARGET_O) $(TARGET_OBJ)
@@ -13,13 +16,13 @@ c: $(TARGET_O) $(TARGET_OBJ)
 java: $(TARGET_JAVA)
 
 %.class: %.java
-	javac -classpath $(shell dirname $<) $<
+	$(JCC) -classpath $(shell dirname $<) $<
 
 %.o: %.c
-	gcc-6 -std=c11 -c $< -o $@
+	$(CC) -std=c11 -c $< -o $@
 
 %.obj: %.cpp
-	gcc-6 -c $< -o $@
+	$(CC) -c $< -o $@
 
 clean: clean-c clean-java
 
