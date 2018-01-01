@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: gcc:latest
+      - image: circleci/openjdk:8-jdk
     working_directory: ~/LeetCode
     steps:
       - checkout
