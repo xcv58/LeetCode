@@ -4,8 +4,7 @@ jdk:
 addons:
   apt:
     packages:
-    - gcc
-    - build-essential
+    - g++
 install: true
 script:
   - make
