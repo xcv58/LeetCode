@@ -12,23 +12,12 @@ class Solution {
         HashMap<TreeNode, Integer> cache = new HashMap<>();
         HashMap<Integer, Integer> map = new HashMap<>();
         this.traversal(root, map, cache);
-        int max = 0;
-        for (Integer i : map.values()) {
-            if (max < i) {
-                max = i;
-            }
-        }
-        List<Integer> list = new ArrayList<>();
-        for (Integer key : map.keySet()) {
-            if (map.get(key) == max) {
-                list.add(key);
-            }
-        }
-        int[] res = new int[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            res[i] = list.get(i);
-        }
-        return res;
+        Integer max = map.values().stream().reduce(Integer::max).orElse(0);
+        return map.entrySet().stream()
+            .filter(p -> p.getValue() == max)
+            .map(Map.Entry::getKey)
+            .mapToInt(x -> x)
+            .toArray();
     }
 
     private void traversal(TreeNode root, HashMap<Integer, Integer> map, HashMap<TreeNode, Integer> cache) {
