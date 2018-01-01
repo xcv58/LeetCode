@@ -1,6 +1,8 @@
 LeetCode
 ========
 
+[![CircleCI](https://circleci.com/gh/xcv58/LeetCode.svg?style=svg)](https://circleci.com/gh/xcv58/LeetCode)
+
 The solutions of [LeetCode](https://oj.leetcode.com/problems/), include Java, C, Python version.
 
 The C and Java codes need compile. just use `make` to compile them. `make clean` will delete all compiled files.

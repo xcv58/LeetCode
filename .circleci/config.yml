@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: xcv58/openjdk
+    working_directory: ~/LeetCode
+    steps:
+      - checkout
+      - run: make
