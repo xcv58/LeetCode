@@ -14,7 +14,7 @@ struct TreeNode {
 class Solution {
 public:
   vector<int> preorderTraversal(TreeNode *root) {
-    vector<int> result;
+    vector<int> result;   //vector of integer of length infinity
     stack<TreeNode *> nodeStack;
 
     for(nodeStack.push(root); !nodeStack.empty(); root = nodeStack.top(), nodeStack.pop()) {
